@@ -1,0 +1,21 @@
+{
+  "canisters": {
+    "vehicleManagement": {
+      "main": "backend/main.mo",
+      "type": "motoko"
+    },
+      "frontend": {
+        "dependencies": ["vehicleManagement"],
+            "type": "assets",
+            "source": ["dist/"]
+      }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

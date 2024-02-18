@@ -1,0 +1,119 @@
+type User = 
+ record {
+   addedBy: text;
+   address: text;
+   contact: nat;
+   dob: text;
+   duty: text;
+   email: text;
+   idNo: text;
+   name: text;
+   sex: text;
+   surname: text;
+   title: text;
+   userHistory: text;
+ };
+type EmpsAndCar = 
+ record {
+   deadLine: text;
+   employee: text;
+   importance: text;
+   status: text;
+   supervisor: text;
+   task: text;
+ };
+type DriverAndHR = 
+ record {
+   driver: text;
+   hr: text;
+   judgement: text;
+   offense: float64;
+   punishment: text;
+ };
+type DriverAndAccountants = 
+ record {
+   accountant: text;
+   amountGiven: float64;
+   driver: text;
+   purposeOfMoney: text;
+   signedBy: text;
+ };
+type Driver = 
+ record {
+   classLicense: nat;
+   email: text;
+   experience: text;
+   level: text;
+   licenseNo: text;
+   ratings: float64;
+ };
+type CarsAndAccounts = 
+ record {
+   amountPaidOfInsur: nat;
+   amountPaidofCarInsur: float64;
+   costOfService: float64;
+   dateOfService: text;
+   datePaidCarInsur: text;
+   datePaidInsur: text;
+   email: text;
+   expiryDateOfInsur: text;
+   expiryDateOfRadioInsur: text;
+   fuelCardAmount: float64;
+   fuelCardPaymentDay: text;
+   fuelCardType: text;
+   plateNo: text;
+   zinarPaymentsAmount: float64;
+   zinaraEpiryDate: text;
+   zinaraPaymentDate: text;
+ };
+type Cars = 
+ record {
+   addedBy: text;
+   audometerOnBuying: nat;
+   carName: text;
+   carType: text;
+   dateCarBought: text;
+   department: text;
+   engineNo: text;
+   mileageToDoService: float64;
+   plateNo: text;
+   statusOfCar: text;
+ };
+type CarAndDriver = 
+ record {
+   availabilty: bool;
+   comments: text;
+   dateAndTime: text;
+   destination: text;
+   email: text;
+   finalOdometerOnFinishingJourney: float64;
+   initialOdometerOnStartingJourney: float64;
+   plateNo: text;
+   purpose: text;
+ };
+service : {
+  addCar: (Cars) -> ();
+  addCarAndAccountant: (CarsAndAccounts) -> ();
+  addCarAndDriver: (CarAndDriver) -> ();
+  addDriver: (Driver) -> ();
+  addDriverAndAccountant: (DriverAndAccountants) -> ();
+  addDriverAndHr: (DriverAndHR) -> ();
+  addEmpAndCar: (EmpsAndCar) -> ();
+  addUser: (User) -> ();
+  getCarsAndAccountantsData: () -> (vec CarsAndAccounts) query;
+  getCarsAndDriversData: () -> (vec CarAndDriver) query;
+  getCarsData: () -> (vec Cars) query;
+  getDriversAndAccountantsData: () -> (vec DriverAndAccountants) query;
+  getDriversAndHRData: () -> (vec DriverAndHR) query;
+  getDriversData: () -> (vec Driver) query;
+  getEmpsAndDriversData: () -> (vec EmpsAndCar) query;
+  getUsersData: () -> (vec User) query;
+  searchCarAndAccountantData: (text) -> (vec CarsAndAccounts);
+  searchCarAndDriverData: (text) -> (vec CarAndDriver);
+  searchCarData: (text) -> (vec Cars);
+  searchDriverAnHrData: (text) -> (vec DriverAndHR);
+  searchDriverAndAccountantData: (text) -> (vec DriverAndAccountants);
+  searchDriverData: (text) -> (vec Driver);
+  searchEmpAndCarData: (text) -> (vec EmpsAndCar);
+  searchUsersData: (text) -> (vec User);
+}

@@ -1,0 +1,108 @@
+import PeopleIcon from '@mui/icons-material/People';
+import StorageIcon from '@mui/icons-material/Storage';
+import CollectionsIcon from '@mui/icons-material/Collections';
+import PublicIcon from '@mui/icons-material/Public';
+import SwapHorizIcon from '@mui/icons-material/SwapHoriz';
+import VerticalShadesClosedIcon from '@mui/icons-material/VerticalShadesClosed';
+import AssuredWorkloadIcon from '@mui/icons-material/AssuredWorkload';
+import DriveEtaIcon from '@mui/icons-material/DriveEta';
+import TaxiAlertIcon from '@mui/icons-material/TaxiAlert';
+import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+
+import { IoPeople } from "react-icons/io5";
+import { MdOutlineStorage } from "react-icons/md";
+import { MdAssuredWorkload } from "react-icons/md";
+import { MdOutlineDriveEta } from "react-icons/md";
+import { FaTaxi } from "react-icons/fa6";
+import { MdAccountBalanceWallet } from "react-icons/md";
+import { GrStorage } from "react-icons/gr";
+import { FaShippingFast } from "react-icons/fa";
+import { FaRegCircleUser } from "react-icons/fa6";
+export const NavBarLists = [
+    {
+        id : 0,
+        icon : <IoPeople />,
+        label : "Add Car",
+        route : "addCar"
+    },
+    {
+        id : 1,
+        icon : <MdOutlineStorage />,
+        label : "Add Driver And Accountant",
+        route : "addDriverAndAccountant"
+    },
+    {
+        id :2,
+        icon : <MdOutlineStorage />,
+        label : "Add Car And Accounts",
+        route : "addCarAndAccounts"
+    },
+    {
+        id : 3,
+        icon : <IoPeople />,
+        label : "AddUser",
+        route : "addUser"
+    },
+    {
+        id : 4,
+        icon : <MdOutlineStorage />,
+        label : "Add Car And Driver",
+        route : "addCarAndDriver"
+    },
+    {
+        id : 5,
+        icon : <MdOutlineStorage />,
+        label : "Add Employees And Cars",
+        route : "addEmpsAndCars"
+    },
+    {
+        id : 6,
+        icon : <MdOutlineStorage />,
+        label : "Add Driver And HR",
+        route : "addDriverAndHR"
+    },
+    {
+        id : 7,
+        icon : <FaRegCircleUser />,
+        label : "Show Users",
+        route : "showUsers"
+    },
+    {
+        id : 8,
+        icon : <FaShippingFast />,
+        label : "Show Cars",
+        route : "showCars"
+    },
+    {
+        id : 9,
+        icon : <GrStorage />,
+        label : "Show Cars And Accountants",
+        route : "showCarsAndAccountas"
+    },
+    {
+        id : 10,
+        icon : <MdAccountBalanceWallet />,
+        label : "Show Driver And Accounts",
+        route : "showDriverAndAccounts"
+    },
+    {
+        id : 11,
+        icon : <FaTaxi />,
+        label : "Show Employes And Car",
+        route : "showEmpsAndCar"
+    },
+    {
+        id : 12,
+        icon : <MdOutlineDriveEta />,
+        label : "Show Car And Driver",
+        route : "showCarAndDriver"
+    },
+    {
+        id : 13,
+        icon : <MdAssuredWorkload />,
+        label : "Show Driver And HR",
+        route : "showDriverAndHR"
+    },
+    
+]
